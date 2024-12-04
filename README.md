@@ -1,12 +1,11 @@
-# Healthcare-Data-Pipeline
-
+# Description 
 This document outlines the functionality of a simple healthcare data pipeline system designed to simulate patient data ingestion, processing, compliance, security, and integration with medical billing and queue systems. The system operates on data in JSON format and mimics the steps involved in managing patient records while considering security protocols and HIPAA compliance.
 
-# Data Pipeline Ingestion
+1. # Data Pipeline Ingestion
 Purpose:
 The ingestData function simulates the process of ingesting patient data from a healthcare provider’s system. It organizes the data into a structured format and stores it in a Map object, making it easy to access and manage individual patient records.
 
-# Functionality:
+Functionality:
 
 Accepts four arrays: patientID, age, medicalrecordID, and https_source.
 For each patient, creates an object containing their details (age, medicalrecordID, and https_source).
@@ -31,12 +30,13 @@ Map {
     medicalrecordID: '1000347',
     https_source: 'kaiserpermanente.org'
   }
-}
-# Data Processing and Error Handling
+} <br>
+
+2. # Data Processing and Error Handling
 Purpose:
 The processPatientsrecord function simulates the processing of patient records based on HIPAA compliance and security protocols. It handles both successful processing and errors based on the record type and HIPAA approval status.
 
-# Functionality:
+Functionality:
 
 Uses a Promise to simulate asynchronous behavior when processing patient records.
 If the record is private and HIPAA-approved, it resolves after a timeout.
@@ -53,12 +53,13 @@ Output:
 
 text
 Copy code
-Patient record is sealed
-Compliance and Security Processes
+Patient record is sealed <br>
+
+3. # Compliance and Security Processes
 Purpose:
 The grantAccess function checks if user credentials meet the security requirements, including verifying the user ID, username, and password. This function mimics the process of granting or denying access to sensitive healthcare data based on security compliance.
 
-#Functionality:
+Functionality:
 
 Accepts arrays of usersID, usersname, and password.
 Checks if the user ID contains 'JeMa', if the username contains '@', and if the password also contains '@'.
@@ -76,12 +77,13 @@ Output:
 
 text
 Copy code
-Access Approved
-# Output Integration and Database Fetch
+Access Approved <br>
+
+4. # Output Integration and Database Fetch
 Purpose:
 The getMedicalbill function simulates output integration by creating and logging an object with a medical bill message and its associated queue status.
 
-# Functionality:
+Functionality:
 
 Accepts two parameters: message and queue, both of which are arrays.
 Extracts the first element from both arrays to form a structured object.
