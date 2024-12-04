@@ -32,11 +32,11 @@ Map {
     https_source: 'kaiserpermanente.org'
   }
 }
-2. Data Processing and Error Handling
+# Data Processing and Error Handling
 Purpose:
 The processPatientsrecord function simulates the processing of patient records based on HIPAA compliance and security protocols. It handles both successful processing and errors based on the record type and HIPAA approval status.
 
-Functionality:
+# Functionality:
 
 Uses a Promise to simulate asynchronous behavior when processing patient records.
 If the record is private and HIPAA-approved, it resolves after a timeout.
@@ -54,11 +54,11 @@ Output:
 text
 Copy code
 Patient record is sealed
-3. Compliance and Security Processes
+Compliance and Security Processes
 Purpose:
 The grantAccess function checks if user credentials meet the security requirements, including verifying the user ID, username, and password. This function mimics the process of granting or denying access to sensitive healthcare data based on security compliance.
 
-Functionality:
+#Functionality:
 
 Accepts arrays of usersID, usersname, and password.
 Checks if the user ID contains 'JeMa', if the username contains '@', and if the password also contains '@'.
@@ -77,11 +77,11 @@ Output:
 text
 Copy code
 Access Approved
-4. Output Integration and Database Fetch
+# Output Integration and Database Fetch
 Purpose:
 The getMedicalbill function simulates output integration by creating and logging an object with a medical bill message and its associated queue status.
 
-Functionality:
+# Functionality:
 
 Accepts two parameters: message and queue, both of which are arrays.
 Extracts the first element from both arrays to form a structured object.
